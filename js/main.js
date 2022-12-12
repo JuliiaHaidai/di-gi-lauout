@@ -23,3 +23,22 @@ $(function () {
     ],
   });
 });
+
+$(function () {
+  $(".testimonials__items").slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  });
+});
+
+const backToTopButton = document.querySelector(".footer__up-btn");
+
+const goToTop = () => {
+  document.body.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+
+backToTopButton.addEventListener("click", goToTop);
